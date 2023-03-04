@@ -22,7 +22,9 @@ const FeedbackCard = ({
             variants={fadeIn('', 'spring', index * 0.5, 0.75)}
             className="bg-black-200 p-10 rounded-3xl w-full select-none"
         >
-            <p className="text-white font-black text-[48px] leading-none">"</p>
+            <p className="text-white font-black text-[48px] leading-none -mb-1">
+                "
+            </p>
             <div className="mt-1 ">
                 <p className="text-white tracking-wider text-[18px]">
                     {testimonial}
@@ -67,7 +69,7 @@ const Feedbacks = () => {
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
                     breakpoints={{
-                        768: {
+                        990: {
                             slidesPerView: 2,
                         },
                         1200: {

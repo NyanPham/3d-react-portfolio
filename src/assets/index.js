@@ -7,6 +7,8 @@ import github from './github.png'
 import view from './eye.png'
 import menu from './menu.svg'
 import close from './close.svg'
+import paw from './paw.svg'
+import nyanLogo from './nyan-logo.png'
 
 import hella from './company/hella.png'
 import halo from './company/halosoft.png'
@@ -59,6 +61,7 @@ export {
     view,
     menu,
     close,
+    paw,
     css,
     docker,
     figma,
@@ -68,6 +71,7 @@ export {
     mongodb,
     nodejs,
     reactjs,
+    nyanLogo,
     redux,
     tailwind,
     typescript,

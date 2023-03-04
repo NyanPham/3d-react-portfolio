@@ -13,6 +13,21 @@
   color-scheme: dark;
 }
 
+.swiper-pagination {
+  --swiper-pagination-bottom: -3px;
+}
+
+.swiper-wrapper {
+  padding-bottom: 1.25rem;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-size: 0.75rem;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-theme-color: #2f80ed;
+  --swiper-pagination-bullet-horizontal-gap: 0.35rem;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -216,5 +231,15 @@
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+@keyframes pulse {
+  from {
+      opacity: 0;
+      fill: #6cff8d;
+  } 
+  to {
+      opacity: 1;
   }
 }

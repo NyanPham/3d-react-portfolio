@@ -235,6 +235,62 @@ const testimonials = [
 
 const projects = [
     {
+        name: 'Nyan Store v2.0',
+        description: 'A MERN stack feature-rich e-commerce site',
+        tags: [
+            {
+                name: 'reactjs',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'tailwindcss',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'nodejs',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'reduxjs',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'expressjs',
+                color: 'yellow-text-gradient',
+            },
+            {
+                name: 'mongodb',
+                color: 'green-text-gradient',
+            },
+        ],
+        image: nyanStore,
+        source_code_link: 'https://github.com/NyanPham/Nyan-Store',
+        demo_code_link: 'https://elaborate-chimera-ea1e59.netlify.app/',
+        tier: 'personal',
+    },
+    {
+        name: 'GentleNyan Store',
+        description: 'A serverless e-commerce (React & Firebase)',
+        tags: [
+            {
+                name: 'reactjs',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'tailwindcss',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'firebase',
+                color: 'yellow-text-gradient',
+            },
+        ],
+        image: gentleNyan,
+        source_code_link: 'https://github.com/NyanPham/gentlenyanstore-client',
+        demo_code_link: 'https://kind-jepsen-d6f299.netlify.app/',
+        tier: 'personal',
+    },
+    {
         name: 'Portfolio v1.0',
         description: 'The first version of my portfolio',
         tags: [
@@ -338,62 +394,6 @@ const projects = [
         image: IPASystem,
         source_code_link: 'https://github.com/NyanPham/nyan-ipa',
         demo_code_link: 'https://spectacular-genie-a86de2.netlify.app/',
-        tier: 'personal',
-    },
-    {
-        name: 'GentleNyan Store',
-        description: 'A serverless e-commerce (React & Firebase)',
-        tags: [
-            {
-                name: 'reactjs',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'tailwindcss',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'firebase',
-                color: 'yellow-text-gradient',
-            },
-        ],
-        image: gentleNyan,
-        source_code_link: 'https://github.com/NyanPham/gentlenyanstore-client',
-        demo_code_link: 'https://kind-jepsen-d6f299.netlify.app/',
-        tier: 'personal',
-    },
-    {
-        name: 'Nyan Store v2.0',
-        description: 'A MERN stack feature-rich e-commerce site',
-        tags: [
-            {
-                name: 'reactjs',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'tailwindcss',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'nodejs',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'reduxjs',
-                color: 'pink-text-gradient',
-            },
-            {
-                name: 'expressjs',
-                color: 'yellow-text-gradient',
-            },
-            {
-                name: 'mongodb',
-                color: 'green-text-gradient',
-            },
-        ],
-        image: nyanStore,
-        source_code_link: 'https://github.com/NyanPham/Nyan-Store',
-        demo_code_link: 'https://elaborate-chimera-ea1e59.netlify.app/',
         tier: 'personal',
     },
     {
