@@ -9,7 +9,7 @@ const LoadingLayer = () => {
 
     const progressBarStyle = {
         backgroundImage: 'linear-gradient(to left, #6cff8d, #00A9E9, #00A9E9)',
-        width: `${progress.toFixed(2)}%`,
+        width: `${progress}%`,
     }
 
     return (
@@ -32,7 +32,9 @@ const LoadingLayer = () => {
                 </div>
                 <div className="text-xl text-white font-semibold mt-7 p-5 flex flex-grow justify-between items-center">
                     <span>0%</span>
-                    <span className="text-[#6cff8d]">{progress}%</span>
+                    <span className="text-[#6cff8d]">
+                        {Math.round(progress)}%
+                    </span>
                 </div>
             </div>
         </section>
