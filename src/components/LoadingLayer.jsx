@@ -12,8 +12,6 @@ const LoadingLayer = () => {
         width: `${progress}%`,
     }
 
-    console.log('loading: ', progress, '%')
-
     return (
         <section className="fixed top-0 left-0 w-screen h-screen bg-blue-dark text-black z-30 grid place-items-center">
             <div className="relative w-[500px] h-52 border-2 border-blue-300">
@@ -30,7 +28,10 @@ const LoadingLayer = () => {
                     <div className="absolute w-3/5 h-[1px] bg-[#4299e1] bottom-0 left-1/2 -translate-x-1/2"></div>
                 </div>
                 <div className="mt-10 w-4/5 h-3 relative mx-auto bg-gray-500 rounded-sm">
-                    <div className="h-full" style={progressBarStyle}></div>
+                    <div
+                        className="h-full transition-all duration-75"
+                        style={progressBarStyle}
+                    ></div>
                 </div>
                 <div className="text-xl text-white font-semibold mt-7 p-5 flex flex-grow justify-between items-center">
                     <span>0%</span>
