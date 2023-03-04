@@ -20,7 +20,7 @@ const FeedbackCard = ({
     return (
         <motion.div
             variants={fadeIn('', 'spring', index * 0.5, 0.75)}
-            className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full select-none"
+            className="bg-black-200 p-10 rounded-3xl w-full select-none"
         >
             <p className="text-white font-black text-[48px] leading-none">"</p>
             <div className="mt-1 ">
@@ -62,17 +62,17 @@ const Feedbacks = () => {
                 className={`${styles.padding} -mt-32 pb-14 flex flex-wrap gap-7`}
             >
                 <Swiper
-                    spaceBetween={50}
+                    spaceBetween={15}
                     slidesPerView={1}
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
                     breakpoints={{
-                        640: {
+                        768: {
                             slidesPerView: 2,
                         },
-                        // when window width is >= 768px
-                        768: {
+                        1200: {
                             slidesPerView: 3,
+                            spaceBetween: 30,
                         },
                     }}
                 >

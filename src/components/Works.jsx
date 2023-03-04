@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import Tilt from 'react-tilt'
-import { motion, useAnimation, AnimatePresence } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import { styles } from '../styles'
 import { github, view } from '../assets'
 import { SectionWrapper } from '../hoc'
@@ -30,8 +30,7 @@ const ProjectCard = ({
     return (
         <motion.div
             variants={fadeIn('up', 'spring', index * 0.25, 0.75)}
-            animate={hasClicked ? control : false}
-            viewport={{ once: true }}
+            animate={hasClicked || window.innerWidth <= 1024 ? control : false}
         >
             <Tilt
                 options={{
@@ -39,7 +38,7 @@ const ProjectCard = ({
                     scale: 1,
                     speed: 450,
                 }}
-                className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+                className="bg-tertiary p-5 rounded-2xl w-full"
             >
                 <div className="relative w-full h-[230px]">
                     <img
@@ -171,7 +170,12 @@ const Works = () => {
                 </li>
             </ul>
 
-            <div className="mt-20 flex flex-wrap gap-7">
+            <div
+                className="mt-20 grid gap-7"
+                style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+                }}
+            >
                 {projectsToShow.map((project, index) => (
                     <ProjectCard
                         key={`project-${index}`}

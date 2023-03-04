@@ -1,15 +1,14 @@
+import { Suspense, lazy } from 'react'
+
 import { BrowserRouter } from 'react-router-dom'
-import {
-    About,
-    Contact,
-    Experience,
-    Feedbacks,
-    Hero,
-    Navbar,
-    Tech,
-    Works,
-    StarsCanvas,
-} from './components'
+import { About, Hero, Navbar } from './components'
+
+const Feedbacks = lazy(() => import('./components/Feedbacks'))
+const Experience = lazy(() => import('./components/Experience'))
+const Works = lazy(() => import('./components/Works'))
+const Tech = lazy(() => import('./components/Tech'))
+const Contact = lazy(() => import('./components/Contact'))
+const StarsCanvas = lazy(() => import('./components/canvas/Stars'))
 
 function App() {
     return (
@@ -20,14 +19,16 @@ function App() {
                     <Hero />
                 </div>
                 <About />
-                <Experience />
-                <Tech />
-                <Works />
-                <Feedbacks />
-                <div className="relative z-0">
-                    <Contact />
-                    <StarsCanvas />
-                </div>
+                <Suspense fallback={<div>Loading</div>}>
+                    <Experience />
+                    <Tech />
+                    <Works />
+                    <Feedbacks />
+                    <div className="relative z-0">
+                        <Contact />
+                        <StarsCanvas />
+                    </div>
+                </Suspense>
             </div>
         </BrowserRouter>
     )
