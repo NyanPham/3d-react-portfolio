@@ -18,7 +18,7 @@ const Loader = ({ isMain = false }) => {
             as="div"
             center
             style={{
-                display: isMain ? 'none' : 'flex',
+                display: isMain && Math.round(progress) <= 75 ? 'none' : 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'column',

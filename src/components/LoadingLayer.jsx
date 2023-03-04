@@ -5,15 +5,17 @@ import { paw } from '../assets'
 const LoadingLayer = () => {
     const { mainModelsLoaded, percentage: progress } = useAppContext()
 
-    if (mainModelsLoaded) return <></>
-
     const progressBarStyle = {
         backgroundImage: 'linear-gradient(to left, #6cff8d, #00A9E9, #00A9E9)',
         width: `${progress}%`,
     }
 
     return (
-        <section className="fixed top-0 left-0 w-screen h-screen bg-blue-dark text-black z-30 grid place-items-center">
+        <section
+            className={`fixed top-0 left-0 w-screen h-screen bg-blue-dark text-black z-30 grid place-items-center pointer-events-none transition duration-300 ${
+                mainModelsLoaded ? 'opacity-0' : 'opacity-100'
+            }`}
+        >
             <div className="relative w-[500px] h-52 border-2 border-blue-300">
                 <div className="relative text-white p-4 text-xl font-bold flex justify-center items-center gap-2">
                     Hang on
