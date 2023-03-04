@@ -1,17 +1,11 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense, useEffect, useState } from 'react'
-import { OrbitControls, Preload, useGLTF, useProgress } from '@react-three/drei'
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
-import { useAppContext } from '../../context/appContext'
 
 const Computers = ({ isMobile }) => {
     const computer = useGLTF('./desktop_pc/scene.gltf')
-    const { progress } = useProgress()
-    const { completeLoadMainModels, setPercentage } = useAppContext()
-
-    completeLoadMainModels()
-    setPercentage(progress)
 
     return (
         <mesh>
@@ -63,7 +57,7 @@ const ComputerCanvas = () => {
             camera={{ position: [20, 3, 5], fov: 25 }}
             gl={{ preserveDrawingBuffer: true }}
         >
-            <Suspense fallback={<CanvasLoader />}>
+            <Suspense fallback={<CanvasLoader isMain={true} />}>
                 <OrbitControls
                     enableZoom={false}
                     maxPolarAngle={Math.PI / 2}

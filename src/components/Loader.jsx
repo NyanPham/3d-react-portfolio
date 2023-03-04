@@ -1,14 +1,24 @@
 import { Html, useProgress } from '@react-three/drei'
+import { useAppContext } from '../context/appContext'
 
-const Loader = () => {
+const Loader = ({ isMain = false }) => {
     const { progress } = useProgress()
+
+    const { completeLoadMainModels, setPercentage } = useAppContext()
+
+    if (isMain) {
+        if (Math.round(progress) === 100) {
+            completeLoadMainModels()
+        }
+        setPercentage(progress)
+    }
 
     return (
         <Html
             as="div"
             center
             style={{
-                display: 'flex',
+                display: isMain ? 'none' : 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'column',
