@@ -7,7 +7,7 @@ const Loader = ({ isMain = false }) => {
     const { completeLoadMainModels, setPercentage } = useAppContext()
 
     if (isMain) {
-        if (Math.round(progress) === 100) {
+        if (Math.round(progress) <= 75) {
             completeLoadMainModels()
         }
         setPercentage(progress)

@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react'
 
 import { BrowserRouter } from 'react-router-dom'
 import { About, Hero, Navbar, LoadingLayer } from './components'
+import ToastContainer from './components/Toast/ToastContainer'
 import ContextProvider, { useAppContext } from './context/appContext'
 
 const Feedbacks = lazy(() => import('./components/Feedbacks'))
@@ -33,6 +34,7 @@ function App() {
                         </div>
                     </Suspense>
                 </div>
+                <ToastContainer />
             </ContextProvider>
         </BrowserRouter>
     )

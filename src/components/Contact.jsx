@@ -5,6 +5,7 @@ import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
+import { useAppContext } from '../context/appContext'
 
 const Contact = () => {
     const formRef = useRef()
@@ -16,6 +17,7 @@ const Contact = () => {
     })
 
     const [loading, setLoading] = useState(false)
+    const { updateAlert, toggleAlert } = useAppContext()
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -29,12 +31,28 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
+        const emptyFields = Object.entries(form).filter(
+            (pair) => pair[1] === ''
+        )
+
+        if (emptyFields.length) {
+            updateAlert({
+                type: 'error',
+                text: `Please fill in all the input fields:${emptyFields.map(
+                    (pair) => ' ' + pair[0]
+                )}`,
+                title: 'Contact Email',
+            })
+            toggleAlert(true)
+            return
+        }
+
         setLoading(true)
 
         emailjs
             .send(
-                process.env.REACT_APP_EMAIL_SERVICE_ID,
-                process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+                import.meta.env.VITE_APP_EMAIL_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID,
                 {
                     from_name: form.name,
                     to_name: 'Nyan',
@@ -42,11 +60,16 @@ const Contact = () => {
                     to_email: 'phamthanhnhanussh@gmail.com',
                     message: form.message,
                 },
-                process.env.REACT_APP_EMAIL_ACCOUNT_ID
+                import.meta.env.VITE_APP_EMAIL_ACCOUNT_ID
             )
             .then(() => {
                 setLoading(false)
-                alert('Thank you. I will get back to you as soon as possible')
+                updateAlert({
+                    type: 'success',
+                    text: `Thank you ${form.name} - ${form.email}. I will get back to you as soon as possible`,
+                    title: 'Contact Email',
+                })
+                toggleAlert(true)
                 setForm({
                     name: '',
                     email: '',
@@ -55,8 +78,12 @@ const Contact = () => {
             })
             .catch((err) => {
                 setLoading(false)
-                console.log(err)
-                alert('something went wrong')
+                updateAlert({
+                    type: 'error',
+                    text: 'Something went wrong when sending your email. Please check your info and try again later',
+                    title: 'Contact Email',
+                })
+                toggleAlert(true)
             })
     }
 

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Tilt from 'react-tilt'
 import { motion, useAnimation } from 'framer-motion'
 import { styles } from '../styles'
@@ -6,6 +6,8 @@ import { github, view } from '../assets'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
+
+const tiers = ['all', 'professional', 'personal']
 
 const ProjectCard = ({
     name,
@@ -99,6 +101,49 @@ const ProjectCard = ({
     )
 }
 
+const TierSelector = ({ handleTierClick, selectedTier }) => {
+    const parentRef = useRef()
+    const [posData, setPosData] = useState({
+        left: 0,
+        width: 0,
+    })
+
+    useEffect(() => {
+        const currentTierElement = parentRef.current.querySelector(
+            `[data-tier="${selectedTier}"]`
+        )
+
+        setPosData({
+            left: `${currentTierElement.offsetLeft}px`,
+            width: `${currentTierElement.clientWidth}px`,
+        })
+    }, [selectedTier])
+
+    return (
+        <ul
+            className="mt-5 flex flex-wrap w-full justify-center items-center gap-4 relative"
+            ref={parentRef}
+        >
+            <div
+                className="absolute top-0 h-full bg-white rounded-xl z-[-1] transition-all duration-300 ease-in-out"
+                style={posData}
+            ></div>
+            {tiers.map((tier) => (
+                <li
+                    key={tier}
+                    data-tier={tier}
+                    onClick={handleTierClick}
+                    className={`${
+                        tier === selectedTier ? 'text-black' : ''
+                    } font-semibold text-[18px] flex py-2 px-6 rounded-xl cursor-pointer capitalize transition duration-300`}
+                >
+                    {tier}
+                </li>
+            ))}
+        </ul>
+    )
+}
+
 const Works = () => {
     const [selectedTier, setSelectedTier] = useState('all')
     const hasClickedRef = useRef(false)
@@ -134,41 +179,10 @@ const Works = () => {
                 </motion.p>
             </div>
 
-            <ul className="mt-5 flex flex-wrap w-full justify-center items-center gap-4">
-                <li
-                    data-tier="all"
-                    onClick={handleTierClick}
-                    className={`${
-                        selectedTier === 'all'
-                            ? 'bg-white text-black'
-                            : 'text-white'
-                    } font-semibold text-[18px] flex py-2 px-6 rounded-xl cursor-pointer`}
-                >
-                    All
-                </li>
-                <li
-                    data-tier="professional"
-                    onClick={handleTierClick}
-                    className={`${
-                        selectedTier === 'professional'
-                            ? 'bg-white text-black'
-                            : 'text-white'
-                    } font-semibold text-[18px] flex py-2 px-6 rounded-xl cursor-pointer`}
-                >
-                    Professional
-                </li>
-                <li
-                    data-tier="personal"
-                    onClick={handleTierClick}
-                    className={`${
-                        selectedTier === 'personal'
-                            ? 'bg-white text-black'
-                            : 'text-white'
-                    }  font-semibold text-[18px] flex py-2 px-6 rounded-xl cursor-pointer`}
-                >
-                    Personal
-                </li>
-            </ul>
+            <TierSelector
+                handleTierClick={handleTierClick}
+                selectedTier={selectedTier}
+            />
 
             <div
                 className="mt-20 grid gap-7"

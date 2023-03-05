@@ -16,7 +16,7 @@ const LoadingLayer = () => {
                 mainModelsLoaded ? 'opacity-0' : 'opacity-100'
             }`}
         >
-            <div className="relative w-[500px] h-52 border-2 border-blue-300">
+            <div className="relative w-4/5 sm:w-[500px] h-52 border-2 border-blue-300">
                 <div className="relative text-white p-4 text-xl font-bold flex justify-center items-center gap-2">
                     Hang on
                     <span className="w-4 h-4 color-white fill-white animate-pulse">

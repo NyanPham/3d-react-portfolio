@@ -27,7 +27,6 @@ const Navbar = () => {
                         className="w-28 h-18 object-contain"
                     />
                     <p className="text-white text-[18px] font-bold cursor-pointer flex gap-2">
-                        Nyan{' '}
                         <span className="sm:block hidden">| JS Developer</span>
                     </p>
                 </Link>

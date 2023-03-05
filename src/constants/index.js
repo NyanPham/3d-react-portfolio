@@ -15,6 +15,7 @@ import {
     git,
     figma,
     threejs,
+    shopify,
 
     // companies
     hella,
@@ -127,6 +128,10 @@ const technologies = [
     {
         name: 'figma',
         icon: figma,
+    },
+    {
+        name: 'shopify',
+        icon: shopify,
     },
 ]
 

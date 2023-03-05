@@ -8,6 +8,9 @@ import view from './eye.png'
 import menu from './menu.svg'
 import close from './close.svg'
 import paw from './paw.svg'
+import success from './success.svg'
+import warning from './warning.svg'
+import error from './error.svg'
 import nyanLogo from './nyan-logo.png'
 
 import hella from './company/hella.png'
@@ -26,6 +29,7 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
+import shopify from './company/shopify.png'
 
 // projects
 import portfolio from './projects/portfolio/portfolio-v1.jpg'
@@ -76,6 +80,10 @@ export {
     tailwind,
     typescript,
     threejs,
+    shopify,
+    success,
+    warning,
+    error,
 
     // companies
     hella,
