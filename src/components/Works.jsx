@@ -116,6 +116,8 @@ const TierSelector = ({ handleTierClick, selectedTier }) => {
         setPosData({
             left: `${currentTierElement.offsetLeft}px`,
             width: `${currentTierElement.clientWidth}px`,
+            height: `${currentTierElement.clientHeight}px`,
+            top: `${currentTierElement.offsetTop}px`,
         })
     }, [selectedTier])
 
@@ -135,7 +137,7 @@ const TierSelector = ({ handleTierClick, selectedTier }) => {
                     onClick={handleTierClick}
                     className={`${
                         tier === selectedTier ? 'text-black' : ''
-                    } font-semibold text-[18px] flex py-2 px-6 rounded-xl cursor-pointer capitalize transition duration-300`}
+                    } font-semibold text-[18px] flex py-1 px-3 sm:py-2 sm:px-6 rounded-2xl cursor-pointer capitalize transition duration-300`}
                 >
                     {tier}
                 </li>
