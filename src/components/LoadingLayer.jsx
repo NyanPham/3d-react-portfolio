@@ -31,7 +31,7 @@ const LoadingLayer = () => {
                 </div>
                 <div className="mt-10 w-4/5 h-3 relative mx-auto bg-gray-500 rounded-sm">
                     <div
-                        className="h-full transition-all duration-75"
+                        className="h-full transition-all duration-500"
                         style={progressBarStyle}
                     ></div>
                 </div>

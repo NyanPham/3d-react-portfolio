@@ -4,10 +4,11 @@ import { useAppContext } from '../context/appContext'
 const Loader = ({ isMain = false }) => {
     const { progress } = useProgress()
 
-    const { completeLoadMainModels, setPercentage } = useAppContext()
+    const { mainModelsLoaded, completeLoadMainModels, setPercentage } =
+        useAppContext()
 
     if (isMain) {
-        if (Math.round(progress) <= 75) {
+        if (!mainModelsLoaded && Math.round(progress) > 75) {
             completeLoadMainModels()
         }
         setPercentage(progress)
