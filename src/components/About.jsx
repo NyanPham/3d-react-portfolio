@@ -10,7 +10,7 @@ const ServiceCard = ({ index, title, icon }) => {
     return (
         <Tilt className="w-full">
             <motion.div
-                variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+                variants={fadeIn('right', 'spring', 0.3 * index, 1)}
                 className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
             >
                 <div
@@ -20,9 +20,9 @@ const ServiceCard = ({ index, title, icon }) => {
                     <img
                         src={icon}
                         alt={title}
-                        className="w-16 h-16 object-contain"
+                        className="w-12 h-12 object-contain"
                     />
-                    <h3 className="text-white text-[30px] font-bold text-center">
+                    <h3 className="text-white text-[26px] font-bold text-center">
                         {title}
                     </h3>
                 </div>

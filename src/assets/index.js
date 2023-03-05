@@ -12,6 +12,11 @@ import success from './success.svg'
 import warning from './warning.svg'
 import error from './error.svg'
 import nyanLogo from './nyan-logo.png'
+import edge from './edge.svg'
+import server from './server.svg'
+import gear from './gear.svg'
+import globe from './globe.svg'
+import firefox from './firefox.svg'
 
 import hella from './company/hella.png'
 import halo from './company/halosoft.png'
@@ -84,6 +89,11 @@ export {
     success,
     warning,
     error,
+    edge,
+    server,
+    globe,
+    gear,
+    firefox,
 
     // companies
     hella,

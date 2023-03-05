@@ -16,6 +16,10 @@ import {
     figma,
     threejs,
     shopify,
+    server,
+    globe,
+    gear,
+    firefox,
 
     // companies
     hella,
@@ -63,20 +67,20 @@ export const navLinks = [
 
 const services = [
     {
-        title: 'Web Developer',
-        icon: web,
-    },
-    {
-        title: 'ReactJS Developer',
-        icon: mobile,
+        title: 'Frontend Developer',
+        icon: firefox,
     },
     {
         title: 'Backend Developer',
-        icon: backend,
+        icon: server,
     },
     {
-        title: 'Interpreter',
-        icon: creator,
+        title: 'ALM Developer',
+        icon: gear,
+    },
+    {
+        title: 'Simultaneous Interpreter',
+        icon: globe,
     },
 ]
 
