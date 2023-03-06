@@ -8,7 +8,7 @@ const Loader = ({ isMain = false }) => {
         useAppContext()
 
     if (isMain) {
-        if (!mainModelsLoaded && Math.round(progress) > 85) {
+        if (!mainModelsLoaded && Math.round(progress) > 80) {
             completeLoadMainModels()
         }
         setPercentage(progress)
@@ -19,7 +19,7 @@ const Loader = ({ isMain = false }) => {
             as="div"
             center
             style={{
-                display: isMain && Math.round(progress) <= 85 ? 'none' : 'flex',
+                display: isMain && Math.round(progress) <= 80 ? 'none' : 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'column',
