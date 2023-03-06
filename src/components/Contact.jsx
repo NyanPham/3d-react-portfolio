@@ -6,6 +6,8 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 import { useAppContext } from '../context/appContext'
+import { Link } from 'react-router-dom'
+import { linkedIn, githubSvg, facebook } from '../assets'
 
 const Contact = () => {
     const formRef = useRef()
@@ -88,7 +90,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden select-none">
+        <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden select-none py-12">
             <motion.div
                 variants={slideIn('left', 'tween', 0.2, 1)}
                 className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
@@ -146,6 +148,7 @@ const Contact = () => {
                     <button
                         type="submit"
                         className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+                        disabled={loading}
                     >
                         {loading ? 'Sending...' : 'Send'}
                     </button>
@@ -158,6 +161,42 @@ const Contact = () => {
             >
                 <EarthCanvas />
             </motion.div>
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-8">
+                <Link
+                    to="https://www.facebook.com/JohnJohnson613"
+                    target={'_blank'}
+                    className="w-7 h-7"
+                >
+                    <img
+                        src={facebook}
+                        alt="Facebook"
+                        className="w-full h-full object-contain hover:scale-125 hover:drop-shadow-facebook transition duration-300"
+                    />
+                </Link>
+
+                <Link
+                    to="https://github.com/NyanPham/"
+                    target={'_blank'}
+                    className="w-7 h-7"
+                >
+                    <img
+                        src={githubSvg}
+                        alt="Github"
+                        className="w-full h-full object-contain hover:scale-125 hover:drop-shadow-github transition duration-300"
+                    />
+                </Link>
+                <Link
+                    to="https://www.linkedin.com/in/nhan-pham-dev"
+                    target={'_blank'}
+                    className="w-7 h-7"
+                >
+                    <img
+                        src={linkedIn}
+                        alt="LinkedIn"
+                        className="w-full h-full object-contain hover:scale-125 hover:drop-shadow-linkedin transition duration-300"
+                    />
+                </Link>
+            </div>
         </div>
     )
 }

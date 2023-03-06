@@ -127,7 +127,7 @@ const TierSelector = ({ handleTierClick, selectedTier }) => {
             ref={parentRef}
         >
             <div
-                className="absolute top-0 h-full bg-white rounded-xl z-[-1] transition-all duration-300 ease-in-out"
+                className="absolute top-0 h-full bg-sky-600 rounded-xl z-[-1] transition-all duration-300 ease-in-out"
                 style={posData}
             ></div>
             {tiers.map((tier) => (
@@ -136,7 +136,7 @@ const TierSelector = ({ handleTierClick, selectedTier }) => {
                     data-tier={tier}
                     onClick={handleTierClick}
                     className={`${
-                        tier === selectedTier ? 'text-black' : ''
+                        tier === selectedTier ? 'text-[#E6F4F1]' : ''
                     } font-semibold text-[18px] flex py-1 px-3 sm:py-2 sm:px-6 rounded-2xl cursor-pointer capitalize transition duration-300`}
                 >
                     {tier}

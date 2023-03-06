@@ -17,6 +17,10 @@ import server from './server.svg'
 import gear from './gear.svg'
 import globe from './globe.svg'
 import firefox from './firefox.svg'
+import linkedIn from './linkedin.svg'
+import facebook from './facebook.svg'
+import githubSvg from './github.svg'
+import cv from './pham_thanh_nhan_CV.pdf'
 
 import hella from './company/hella.png'
 import halo from './company/halosoft.png'
@@ -94,6 +98,10 @@ export {
     globe,
     gear,
     firefox,
+    linkedIn,
+    githubSvg,
+    facebook,
+    cv,
 
     // companies
     hella,

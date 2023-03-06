@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 
 import { BrowserRouter } from 'react-router-dom'
 import { About, Hero, Navbar, LoadingLayer } from './components'
