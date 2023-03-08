@@ -46,6 +46,7 @@ import weatherApp from './projects/weather/weather-forecast.jpg'
 import todoApp from './projects/todo-app/todo-app.jpg'
 import pokedex from './projects/pokedex/pokedex.jpg'
 import IPASystem from './projects/ipa-system/ipa-system.jpg'
+import google from './projects/google-clone.google.jpg'
 import gentleNyan from './projects/gentle-nyan/gentle-nyan.png'
 import nyanStore from './projects/nyan-store-v2/nyan-store-v2.jpg'
 import ellaLanding from './projects/ella-landing-page/ella-landing-page.jpg'
@@ -113,6 +114,7 @@ export {
     todoApp,
     pokedex,
     IPASystem,
+    google,
     gentleNyan,
     nyanStore,
     ellaLanding,

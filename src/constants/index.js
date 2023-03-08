@@ -27,6 +27,7 @@ import {
     todoApp,
     pokedex,
     IPASystem,
+    google,
     gentleNyan,
     nyanStore,
     ellaLanding,
@@ -399,6 +400,28 @@ const projects = [
         image: IPASystem,
         source_code_link: 'https://github.com/NyanPham/nyan-ipa',
         demo_code_link: 'https://spectacular-genie-a86de2.netlify.app/',
+        tier: 'personal',
+    },
+    {
+        name: 'Google Search',
+        description: 'A search engine built with NextJS',
+        tags: [
+            {
+                name: 'nextjs',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'tailwindcss',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'google api',
+                color: 'yellow-text-gradient',
+            },
+        ],
+        image: google,
+        source_code_link: 'https://github.com/NyanPham/Google-Clone',
+        demo_code_link: 'https://google-clone-nyanpham.vercel.app/',
         tier: 'personal',
     },
     {
