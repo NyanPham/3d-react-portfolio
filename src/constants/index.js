@@ -28,6 +28,7 @@ import {
     pokedex,
     IPASystem,
     google,
+    instagram,
     gentleNyan,
     nyanStore,
     ellaLanding,
@@ -422,6 +423,28 @@ const projects = [
         image: google,
         source_code_link: 'https://github.com/NyanPham/Google-Clone',
         demo_code_link: 'https://google-clone-nyanpham.vercel.app/',
+        tier: 'personal',
+    },
+    {
+        name: 'Instagram Clone',
+        description: "Post and like people's posts",
+        tags: [
+            {
+                name: 'nextjs',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'tailwindcss',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'firebase',
+                color: 'yellow-text-gradient',
+            },
+        ],
+        image: instagram,
+        source_code_link: 'https://github.com/NyanPham/Instagram-Nyan',
+        demo_code_link: 'https://instagram-nyan.vercel.app/',
         tier: 'personal',
     },
     {
