@@ -20,6 +20,9 @@ import firefox from './firefox.svg'
 import linkedIn from './linkedin.svg'
 import facebook from './facebook.svg'
 import githubSvg from './github.svg'
+import ibm from "./ibm.svg"
+import chatGPT from './chatgpt.svg'
+
 import cv from './pham_thanh_nhan_CV.pdf'
 
 import hella from './company/hella.png'
@@ -104,6 +107,8 @@ export {
     githubSvg,
     facebook,
     cv,
+    ibm,
+    chatGPT,
 
     // companies
     hella,

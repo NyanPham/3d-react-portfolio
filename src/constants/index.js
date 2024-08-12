@@ -17,6 +17,9 @@ import {
     gear,
     firefox,
 
+    ibm,
+    chatGPT,
+
     // companies
     hella,
     halo,
@@ -65,18 +68,18 @@ export const navLinks = [
 
 const services = [
     {
-        title: 'Frontend Developer',
+        title: 'Fullstack Developer',
         icon: firefox,
     },
     {
-        title: 'Backend Developer',
+        title: 'Software Developer',
         icon: server,
     },
     {
-        title: 'ALM Developer',
+        title: 'Toolchain Developer',
         icon: gear,
     },
-    {
+    {   
         title: 'Simultaneous Interpreter',
         icon: globe,
     },
@@ -135,6 +138,10 @@ const technologies = [
         name: 'shopify',
         icon: shopify,
     },
+    {
+        name: 'GenAI',
+        icon: chatGPT,
+    },
 ]
 
 const experiences = [
@@ -152,15 +159,15 @@ const experiences = [
         ],
     },
     {
-        title: 'JavaScript Developer',
-        company_name: 'Hella Vietnam',
+        title: 'Software Developer',
+        company_name: 'Forvia Hella Vietnam',
         icon: hella,
         iconBg: '#383E56',
         date: 'March 2023 - Current',
-        points: [
-            'Developing and maintaining web-based ALM toolchain',
-            'Implementing functions requested by Manager and Leader.',
-            'Ensure the application lifecycle management process.',
+        points: [   
+            'Automate manual tasks of users and clients to reduce by 80% of budget and human resource.',
+            'Built software applications to facilitate automotive software development in Vanilla JS, ReactJS, NodeJS, Azure OpenAI.',
+            'Leverage Generative AI in users daily work on ALM - an IBM application to manage requirements in automotive products development.',
         ],
     },
 ]
