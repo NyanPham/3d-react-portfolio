@@ -138,10 +138,10 @@ const technologies = [
         name: 'shopify',
         icon: shopify,
     },
-    {
-        name: 'GenAI',
-        icon: chatGPT,
-    },
+    // {
+    //     name: 'GenAI',
+    //     icon: chatGPT,
+    // },
 ]
 
 const experiences = [
@@ -326,24 +326,24 @@ const projects = [
         demo_code_link: 'https://elated-beaver-fdddc3.netlify.app/',
         tier: 'personal',
     },
-    {
-        name: 'Weather Forecast',
-        description: 'Forecast the weather of Ho Chi Minh city',
-        tags: [
-            {
-                name: 'javascript',
-                color: 'yellow-text-gradient',
-            },
-            {
-                name: 'weather api',
-                color: 'green-text-gradient',
-            },
-        ],
-        image: weatherApp,
-        source_code_link: 'https://github.com/NyanPham/weather-app-js',
-        demo_code_link: 'https://keen-lewin-897206.netlify.app/',
-        tier: 'personal',
-    },
+    // {
+    //     name: 'Weather Forecast',
+    //     description: 'Forecast the weather of Ho Chi Minh city',
+    //     tags: [
+    //         {
+    //             name: 'javascript',
+    //             color: 'yellow-text-gradient',
+    //         },
+    //         {
+    //             name: 'weather api',
+    //             color: 'green-text-gradient',
+    //         },
+    //     ],
+    //     image: weatherApp,
+    //     source_code_link: 'https://github.com/NyanPham/weather-app-js',
+    //     demo_code_link: 'https://keen-lewin-897206.netlify.app/',
+    //     tier: 'personal',
+    // },
     {
         name: 'Todo App',
         description: 'Simple tasks management app with local storage',
@@ -410,50 +410,50 @@ const projects = [
         demo_code_link: 'https://spectacular-genie-a86de2.netlify.app/',
         tier: 'personal',
     },
-    {
-        name: 'Google Search',
-        description: 'A search engine built with NextJS',
-        tags: [
-            {
-                name: 'nextjs',
-                color: 'pink-text-gradient',
-            },
-            {
-                name: 'tailwindcss',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'google api',
-                color: 'yellow-text-gradient',
-            },
-        ],
-        image: google,
-        source_code_link: 'https://github.com/NyanPham/Google-Clone',
-        demo_code_link: 'https://google-clone-nyanpham.vercel.app/',
-        tier: 'personal',
-    },
-    {
-        name: 'Instagram Clone',
-        description: "Post and like people's posts",
-        tags: [
-            {
-                name: 'nextjs',
-                color: 'pink-text-gradient',
-            },
-            {
-                name: 'tailwindcss',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'firebase',
-                color: 'yellow-text-gradient',
-            },
-        ],
-        image: instagram,
-        source_code_link: 'https://github.com/NyanPham/Instagram-Nyan',
-        demo_code_link: 'https://instagram-nyan.vercel.app/',
-        tier: 'personal',
-    },
+    // {
+    //     name: 'Google Search',
+    //     description: 'A search engine built with NextJS',
+    //     tags: [
+    //         {
+    //             name: 'nextjs',
+    //             color: 'pink-text-gradient',
+    //         },
+    //         {
+    //             name: 'tailwindcss',
+    //             color: 'blue-text-gradient',
+    //         },
+    //         {
+    //             name: 'google api',
+    //             color: 'yellow-text-gradient',
+    //         },
+    //     ],
+    //     image: google,
+    //     source_code_link: 'https://github.com/NyanPham/Google-Clone',
+    //     demo_code_link: 'https://google-clone-nyanpham.vercel.app/',
+    //     tier: 'personal',
+    // },
+    // {
+    //     name: 'Instagram Clone',
+    //     description: "Post and like people's posts",
+    //     tags: [
+    //         {
+    //             name: 'nextjs',
+    //             color: 'pink-text-gradient',
+    //         },
+    //         {
+    //             name: 'tailwindcss',
+    //             color: 'blue-text-gradient',
+    //         },
+    //         {
+    //             name: 'firebase',
+    //             color: 'yellow-text-gradient',
+    //         },
+    //     ],
+    //     image: instagram,
+    //     source_code_link: 'https://github.com/NyanPham/Instagram-Nyan',
+    //     demo_code_link: 'https://instagram-nyan.vercel.app/',
+    //     tier: 'personal',
+    // },
     {
         name: 'Ella landing',
         description: 'Landing page the the Ella 6.0 version release',
