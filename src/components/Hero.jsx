@@ -18,12 +18,12 @@ const Hero = () => {
                         <span className="text-[#915eff]">Nyan Pham</span>
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                        I develop e-commerce websites, user{' '}
+                        I develop high-quality web applications,
                         <br className="sm:block hidden" />
-                        interfaces and web applications
+                        delivering innovative digital solutions.
                     </p>
                 </div>
-            </div>
+            </div>  
             <ComputersCanvas />
             <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
                 <a href="#about">

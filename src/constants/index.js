@@ -13,7 +13,6 @@ import {
     threejs,
     shopify,
     server,
-    globe,
     gear,
     firefox,
 
@@ -49,6 +48,7 @@ import {
     anh,
     tu,
     khanh,
+    penRuler,
 } from '../assets'
 
 export const navLinks = [
@@ -68,32 +68,32 @@ export const navLinks = [
 
 const services = [
     {
-        title: 'Fullstack Developer',
+        title: 'Frontend Developer',
         icon: firefox,
     },
     {
-        title: 'Software Developer',
+        title: 'Backend Developer',
         icon: server,
     },
     {
-        title: 'Toolchain Developer',
+        title: 'DevOps Engineer',
         icon: gear,
     },
     {   
-        title: 'Simultaneous Interpreter',
-        icon: globe,
+        title: 'UI/UX Designer',
+        icon: penRuler,
     },
 ]
 
 const technologies = [
-    {
-        name: 'HTML 5',
-        icon: html,
-    },
-    {
-        name: 'CSS 3',
-        icon: css,
-    },
+    // {
+    //     name: 'HTML 5',
+    //     icon: html,
+    // },
+    // {
+    //     name: 'CSS 3',
+    //     icon: css,
+    // },
     {
         name: 'JavaScript',
         icon: javascript,

@@ -22,8 +22,9 @@ import facebook from './facebook.svg'
 import githubSvg from './github.svg'
 import ibm from "./ibm.svg"
 import chatGPT from './chatgpt.svg'
+import penRuler from './pen-ruler-solid.svg'
 
-import cv from './pham_thanh_nhan_CV.pdf'
+import cv from './phamthanhnhan_cv.pdf'
 
 import hella from './company/hella.png'
 import halo from './company/halosoft.png'
@@ -109,6 +110,7 @@ export {
     cv,
     ibm,
     chatGPT,
+    penRuler,
 
     // companies
     hella,

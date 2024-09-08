@@ -44,10 +44,12 @@ const About = () => {
                 variants={fadeIn('', '', 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                I'm a junior web developer specializing in building new digital
-                experience. Currently, I've been a JavaScript developer focusing
-                on building and maintain web-based ALM toolchains for automotive
-                projects.
+                I’m a web developer specializing in creating innovative digital experiences. 
+                With nearly three years of experience, I focus on JavaScript, building and maintaining 
+                web-based ALM toolchains for automotive projects. I also develop customizable eCommerce
+                templates on Shopify and work with React and NodeJS for full-stack applications. 
+                Currently, I’m leveraging GenAI to speed up development processes, saving significant 
+                time and effort for stakeholders.
             </motion.p>
             <motion.a
                 variants={fadeIn('up', '', 0.1, 1)}
